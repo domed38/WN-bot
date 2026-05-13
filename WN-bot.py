@@ -18,6 +18,9 @@ cooldown_after_reset = 5
 shift_y = -10
 debug_enabled = False
 
+
+pyautogui_lock = threading.Lock()
+
 layout = {
     "check_pos": (0.8859, 0.1222),
     "alt_check_pos": (0.8714, 0.1250),
@@ -72,7 +75,7 @@ def safe_scroll(window, amount):
             pyautogui.scroll(amount)
         return True
     except pyautogui.FailSafeException:
-        log_action(window.title, "fail-safe triggered during scroll")
+        log_action(window.title, "fail-safe triggered")
         raise
 
 def pixel_matches(pos, expected, tol=0, rx=1, ry=1):
