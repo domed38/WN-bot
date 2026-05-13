@@ -7,9 +7,9 @@ import datetime
 import threading
 
 expected_color = (255, 255, 255)
-tolerance = 15
-radius_x = 2
-radius_y = 1
+tolerance = 25
+radius_x = 4
+radius_y = 4
 scroll_limit = 5
 pause_key = "f9"
 debug_key = "f10"
