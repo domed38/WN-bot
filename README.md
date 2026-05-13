@@ -9,6 +9,7 @@ Once all of those are installed, open CMD and run:<br>
     py -m pip install pyautogui pygetwindow keyboard<br>
 <br>
 <br>
+ENSURE YOUR BLUESTACKS IS NAMED ACCORDING TO THE NAMING SCHEME "BlueStacks#" with # being a number
 <br>
 Run Bluestacks as many bluestacks instances as you'd like (PIE 64-bit is recommended) and turn off ads (Settings -> Preferences -> Allow Bluestacks to show ads during gameplay)<br>
 Now run all instances of bluestacks, sign into your Google Play account, and install WhatNot. <br>
