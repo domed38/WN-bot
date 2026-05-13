@@ -1,6 +1,7 @@
 <h2>How to install on windows:</h2>h1></h1><br>
     Bluestacks - https://www.bluestacks.com/<br>
     Python - https://www.microsoft.com/store/productId/9PNRBTZXMB4Z?ocid=libraryshare OR https://www.python.org/downloads/<br>
+    WN-bot.py - download it here<br>
 <br>
 Once all of those are installed, open CMD and run:<br>
     pip install pyautogui pygetwindow keyboard<br>
