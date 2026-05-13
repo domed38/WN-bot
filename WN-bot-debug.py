@@ -81,19 +81,27 @@ def safe_scroll(window, amount):
 def pixel_matches(pos, expected, tol=0, rx=1, ry=1):
     x, y = pos
 
+    print(f"pixel_matches called at base pos: ({x}, {y})", flush=True)
+
     if not is_safe_point(x, y, margin=0):
+        print(f"Position is unsafe/outside screen: ({x}, {y})", flush=True)
         return False
 
     for dx in range(-rx, rx + 1):
         for dy in range(-ry, ry + 1):
             try:
-                pixel = pyautogui.pixel(x + dx, y + dy)
-                print(f"Checking ({x + dx}, {y + dy}) = {pixel}")
+                check_x = x + dx
+                check_y = y + dy
+                pixel = pyautogui.pixel(check_x, check_y)
+
+                print(f"Checking ({check_x}, {check_y}) = {pixel}", flush=True)
 
                 if all(abs(pixel[i] - expected[i]) <= tol for i in range(3)):
+                    print("MATCH FOUND", flush=True)
                     return True
-            except Exception:
-                continue
+
+            except Exception as e:
+                print(f"Pixel read failed at ({x + dx}, {y + dy}): {repr(e)}", flush=True)
 
     return False
 
